@@ -10,14 +10,23 @@
         pulaLinha();
     }
 
-    var numeroPensado = Math.round(Math.random() * 10);
+    function sorteia(n) {
+        var numeroPensado = Math.round(Math.random() * n);
+        return numeroPensado;
+    }
 
+    var numeroPensado = sorteia(parseInt(prompt("Até onde sortear?")));
+    console.log(numeroPensado)
     var chute = parseInt(prompt("Número chutado!"));
 
     if (chute == numeroPensado) {
-        mostra("Acertou!")
+        mostra("Acertou! O número foi " + chute)
     } else {
-        mostra("Errou! O número pensado foi " + numeroPensado)
+        if (chute < numeroPensado) {
+            mostra("Você errou! Seu número foi menor que " + numeroPensado)
+        } else {
+            mostra("Errou! O número foi maior " + numeroPensado)
+        }
     }
 
 </script>
