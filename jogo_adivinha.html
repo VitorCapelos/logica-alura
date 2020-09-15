@@ -17,16 +17,17 @@
 
     var numeroPensado = sorteia(parseInt(prompt("Até onde sortear?")));
     console.log(numeroPensado)
-    var chute = parseInt(prompt("Número chutado!"));
 
-    if (chute == numeroPensado) {
-        mostra("Acertou! O número foi " + chute)
-    } else {
-        if (chute < numeroPensado) {
-            mostra("Você errou! Seu número foi menor que " + numeroPensado)
+    for (var i = 0; i < 3; i++) {
+        var chute = parseInt(prompt("Número chutado!"));
+        if (chute == numeroPensado) {
+            mostra("Acertou! O número foi " + chute)
+            break
         } else {
-            mostra("Errou! O número foi maior " + numeroPensado)
+                mostra("Errou!")
         }
     }
+
+
 
 </script>

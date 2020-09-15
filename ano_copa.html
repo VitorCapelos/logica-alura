@@ -11,10 +11,11 @@
     }
 
     var anoCopa = 1930;
+    var limite = parseInt(prompt("Digite uma data limite"))
 
-    while (anoCopa <= 2020) {
-        alert("Teve copa em " + anoCopa);
+    while (anoCopa <= limite) {
+        mostra("Teve copa em " + anoCopa);
         anoCopa += 4;
     }
-
+    mostra("Ufa, esses foram os anos até " + limite)
 </script>
